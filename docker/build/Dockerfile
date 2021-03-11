@@ -23,4 +23,4 @@ COPY --from=build ${TARGET}/os2rollekatalog-integration.jar .
 
 EXPOSE 8999
 
-ENTRYPOINT ["java", "-Xmx128m", "-jar", "os2rollekatalog-integration.jar"]
+ENTRYPOINT ["java", "-Dloader.path=config/*", "-Xmx128m", "-jar", "os2rollekatalog-integration.jar"]
